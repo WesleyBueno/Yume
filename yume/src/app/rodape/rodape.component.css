@@ -1,0 +1,37 @@
+footer{
+    background-color: #7978F8;
+}
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 35pt;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.fa-facebook:hover{
+    color: rgb(54, 54, 150);
+}
+
+.fa-whatsapp:hover{
+    color: rgb(2, 255, 87);
+}
+
+.fa-envelope-o:hover{
+    color: #f52003b7;
+}
+
+.fa-instagram:hover{
+    color: rgb(255, 0, 170);
+}

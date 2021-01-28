@@ -1,0 +1,49 @@
+
+@import url('https://fo nts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,900&display=swap');
+
+
+.navbar{
+    background-color: #7978F8;
+}
+
+/*Icon-menu*/
+#navbarNav .fa-home{
+    color: #fff;
+    font-size: 25px;
+    padding: 3px;
+    transition: 0.4s;
+}
+
+#navbarNav .fa-calendar{
+    color: #fff;
+    font-size: 21px;
+    padding: 3px;
+    transition: 0.4s;
+}
+
+#navbarNav .fa-users{
+    color: #fff;
+    font-size: 21px;
+    padding: 3px;
+    transition: 0.4s;
+}
+
+#navbarNav .fa:hover{
+    color: rgb(95, 93, 93);
+}
+
+
+
+#navbarNav li{
+    padding-left: 20px;
+}
+
+#navbarNav a{
+    color: #fff;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+#navbarNav a:hover{
+    color: rgb(77, 75, 75);
+}
