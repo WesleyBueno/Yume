@@ -8,6 +8,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TimeComponent } from './time/time.component';
 import { DbmComponent } from './dbm/dbm.component';
+import { CalendarioComponent } from './calendario/calendario.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DbmComponent } from './dbm/dbm.component';
     RodapeComponent,
     InicioComponent,
     TimeComponent,
-    DbmComponent
+    DbmComponent,
+    CalendarioComponent
   ],
   imports: [
     BrowserModule,

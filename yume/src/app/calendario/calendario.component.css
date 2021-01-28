@@ -1,0 +1,108 @@
+@import url('https://fo nts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,900&display=swap');
+
+.datas{ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(219, 224, 224);
+    font-family: 'Poppins',sans-serif;
+}
+
+.calendar{
+    position: relative;
+    background-color: #fff;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 15px solid #fff;
+    border-radius: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.calendar .date{
+    width: 500px;
+    padding-left: 90px;
+    box-sizing: border-box;
+}
+
+.calendar .date h3{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1)
+{
+    color: #7978F8;
+    font-weight: 600;
+}
+
+.calendar .date .days .number.active{
+    background: #7978F8;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.calendar .date .days .number.active:hover{
+    background-color: rgb(207, 204, 204);
+    color: rgb(80, 79, 79);
+    font-weight: 600;
+}
+
+.calendar .evento{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 60px;
+    width: 400px;
+    height: 100%;
+}
+
+.calendar .evento .ev1{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 30px;
+    background-color: #e2e2e5;
+    color: rgb(80, 79, 79);
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 10px;
+    border-radius: 18px;
+}
+
+.calendar .evento .ev1:hover{
+    background-color:#7978F8 ;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.calendar .evento .ev1 h3{
+    padding-left: 10px;
+}
