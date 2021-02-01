@@ -1,21 +1,69 @@
 @import url('https://fo nts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,900&display=swap');
 
+/*Header*/
+
+.fundo{
+    position: relative;
+    top: -100px;
+}
+
+.fundo img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.image1 img{
+
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.header h3{
+    margin-top: 70px;
+    padding: 10px;
+    display: flex;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+/*Header*/
+
+/*titulo*/
+
+.title{
+    margin-top: 50px;
+}
+
+.title .icon img{
+    padding: 10px;
+    width: 400px;
+}
+
+
+/*titulo*/
+
+/*Calendario*/
+
 .datas{ 
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: rgb(219, 224, 224);
     font-family: 'Poppins',sans-serif;
 }
 
 .calendar{
     position: relative;
     background-color: #fff;
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +110,7 @@
 }
 
 .calendar .date .days .number.active{
-    background: #7978F8;
+    background: #7878f8;
     color: #fff;
     cursor: pointer;
     border-radius: 50%;
@@ -89,8 +137,8 @@
     flex-wrap: wrap;
     text-align: center;
     padding-left: 30px;
-    background-color: #e2e2e5;
-    color: rgb(80, 79, 79);
+    background-color: #7978F8 ;
+    color: white;
     cursor: pointer;
     transition: 0.5s;
     margin-top: 10px;
@@ -98,11 +146,373 @@
 }
 
 .calendar .evento .ev1:hover{
-    background-color:#7978F8 ;
-    color: #fff;
+    background-color: #e2e2e5 ;
+    color: rgb(95, 93, 93);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+.calendar .evento .ev1 h2{
+    padding-top: 9px;
+    font-size: 25px;
+}
+
 .calendar .evento .ev1 h3{
+    padding-top: 9px;
     padding-left: 10px;
+    font-size: 20px;
+}
+
+/*Calendario*/
+
+/*Fixado*/
+
+.jumbotron2{
+    width: 100%;
+}
+
+
+.jumbotron2 .container{
+    background: linear-gradient(91.62deg, #7978F8 7.51%, rgba(255, 44, 44, 0.781) 111.21%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.jumbotron2 .container .row{
+    margin: 20px;
+}
+
+.jumbotron2 .btns{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.jumbotron2 .btns a{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50%;
+    border: 2px solid #FFD93A;
+    background:  #FFD93A;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    padding-top: 8px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.jumbotron2 .btns a:hover{
+    background-color: #ffd83ae7;
+    color:  #f7f7f7;
+    border: 2px solid #7978F8;
+    
+    
+}
+
+.jumbotron2 .container h2{
+    font-size: 25px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.jumbotron2 .container img{
+    width: 600px;
+    height: 250px;
+    padding-left: 200px;
+}
+
+.jumbotron2 .container h4{
+    text-align: center;
+    font-size: 15px;
+}
+
+/*Fixado*/
+
+/*Responsividade*/
+@media (max-width: 991px){
+
+    /*header*/
+
+    .fundo{
+        position: relative;
+        top: -40px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .header h3{
+        margin: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .image1 img{
+        max-width: 200px;
+        margin-left: 70px;
+        margin-top: 0px;
+    }
+
+    /*header*/
+
+    /*titulo*/
+
+.title{
+    margin-top: 50px;
+}
+
+.title .icon img{
+    padding: 10px;
+    width: 250px;
+}
+
+/*titulo*/
+
+/*Calendario*/
+
+datas{ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.calendar{
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 15px solid #fff;
+    border-radius: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.calendar .date{
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.calendar .date h3{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1)
+{
+    color: #7978F8;
+    font-weight: 600;
+}
+
+.calendar .date .days .number.active{
+    background: #7878f8;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.calendar .date .days .number.active:hover{
+    background-color: rgb(207, 204, 204);
+    color: rgb(80, 79, 79);
+    font-weight: 600;
+}
+
+.calendar .evento{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 60px;
+    width: 100px;
+    height: 100px;
+}
+
+
+/*Calendario*/
+
+/*Fixado*/
+
+.jumbotron2 .container img{
+    width: 180px;
+    height: 100px;
+    padding-left: 0px;
+}
+
+.jumbotron2 .container h4{
+    display: none;
+}
+
+.jumbotron2 .container h2{
+    display: none;
+}
+
+.jumbotron2 .btns{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    margin: 0px;
+}
+
+.jumbotron2 .btns a{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 20px;
+    border: 2px solid #FFD93A;
+    background:  #FFD93A;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    padding-top: 0px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+/*Fixado*/
+
+
+
+}
+
+@media  (max-width: 700px){
+
+    /*Calendario*/
+
+datas{ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.calendar{
+    position: relative;
+    background-color: #fff;
+    width: 310px;
+    height: 300px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 15px solid #fff;
+    border-radius: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.calendar .date{
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.calendar .date h3{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1)
+{
+    color: #7978F8;
+    font-weight: 600;
+}
+
+.calendar .date .days .number.active{
+    background: #7878f8;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.calendar .date .days .number.active:hover{
+    background-color: rgb(207, 204, 204);
+    color: rgb(80, 79, 79);
+    font-weight: 600;
+}
+
+.calendar .evento{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 60px;
+    width: 100px;
+    height: 100px;
+}
+
+
+/*Calendario*/
+
 }
