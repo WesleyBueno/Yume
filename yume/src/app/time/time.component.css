@@ -1,0 +1,131 @@
+@import url('https://fo nts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,900&display=swap');
+
+/*Header*/
+
+.fundo{
+    position: relative;
+    top: -100px;
+}
+
+.fundo img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.image1 img{
+
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.header h3{
+    margin-top: 70px;
+    padding: 10px;
+    display: flex;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+/*Header*/
+
+/*titulo*/
+
+.title{
+    margin-top: 50px;
+}
+
+.title .icon img{
+    padding: 10px;
+    width: 400px;
+}
+
+/*titulo*/
+
+/*time*/
+
+.time .text h2{
+    text-align: center;
+    font-size: 25px;
+}
+/*Time*/
+
+/*Apoio*/
+
+.apoiadores .apoio img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+/*Apoio*/
+
+@media (max-width: 991px){
+
+    /*header*/
+
+    .fundo{
+        position: relative;
+        top: -40px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .header h3{
+        margin: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .image1 img{
+        max-width: 200px;
+        margin-left: 70px;
+        margin-top: 0px;
+    }
+
+    /*header*/
+
+    /*titulo*/
+
+.title{
+    margin-top: 50px;
+}
+
+.title .icon img{
+    padding: 10px;
+    width: 250px;
+}
+
+/*titulo*/
+
+/*time*/
+.time .text h2{
+    text-align: center;
+    font-size: 15px;
+}
+
+/*time*/
+
+/*apoio*/
+
+.apoiadores .apoio img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+/*apoio*/
+}
