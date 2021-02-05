@@ -21,7 +21,7 @@
     margin-top: 100px;
 }
 
-.header h3{
+.head h3{
     margin-top: 70px;
     padding: 10px;
     display: flex;
@@ -254,7 +254,7 @@
         z-index: -1;
     }
 
-    .header h3{
+    .head h3{
         margin: 10px;
         margin-top: 10px;
         padding: 10px;

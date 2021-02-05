@@ -21,6 +21,10 @@
     padding-top: 50px;
 }
 
+.header{
+    max-width: 1220px;
+}
+
 .header h3{
     margin-top: 50px;
     padding: 10px;
