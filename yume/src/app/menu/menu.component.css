@@ -29,9 +29,6 @@
     transition: 0.4s;
 }
 
-#navbarNav .fa:hover{
-    color: rgb(95, 93, 93);
-}
 
 
 
@@ -45,6 +42,3 @@
     transition: 0.4s;
 }
 
-#navbarNav a:hover{
-    color: rgb(77, 75, 75);
-}

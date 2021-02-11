@@ -5,6 +5,8 @@
 .fundo{
     position: relative;
     top: -100px;
+    width: 100%;
+    height: 50%;
 }
 
 .fundo img{
@@ -18,6 +20,10 @@
 
     width: 700px;
     margin: 90px;
+}
+
+.header{
+    max-width: 1220px;
 }
 
 .image2 img{
@@ -34,6 +40,7 @@
 
 .title{
     margin-top: 50px;
+    
 }
 
 .title .icon img{
@@ -79,39 +86,53 @@
 .etapas .btns #calendario {
     text-align: center;
     text-decoration: none;
-    width: 100px;
-    height: 30px;
+    width: 30%;
+    height: 50%;
     margin: 10px;
     border: 2px solid #FFD93A;
     background:  #FFD93A;
     outline: none;
     color: rgb(0, 0, 0);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     border-radius: 17px;
     transition: 0.3s;
-    padding-top: 2px;
+    padding-top: 6px;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.etapas .btns #calendario:hover{
+    background-color: #7878f8;
+    border-color: #7878f8;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34));
 }
 
 .etapas .btns #regulamento {
     text-align: center;
     text-decoration: none;
-    width: 100px;
-    height: 30px;
+    width: 30%;
+    height: 50%;
     margin: 10px;
     border: 2px solid #01F965;
     background:  #01F965;
     outline: none;
     color: rgb(0, 0, 0);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     border-radius: 17px;
     transition: 0.3s;
-    padding-top: 2px;
+    padding-top: 6px;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.etapas .btns #regulamento:hover{
+    background-color: #e71845b2;
+    border-color: #e71845d7;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34));
 }
 
 /*Etapas*/
@@ -137,6 +158,10 @@
     overflow: hidden;
 }
 
+.formulario #containerForm a{
+    cursor: pointer;
+}
+
 .formulario .container .user{
     position: absolute;
     top: 0;
@@ -150,12 +175,13 @@
     position: relative;
     width: 50%;
     height: 100%;
-    background: #ff0;
+    background: #ffd83ab9;
     transition: 0.5s;
 }
 
 .formulario .container .user .imgBx img{
     position: absolute;
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -203,7 +229,7 @@
 
 .formulario .container .user .formBx form input[type="submit"]{
     max-width: 100px;
-    background: #677eff;
+    background: #7978F8;
     color: #fff;
     cursor: pointer;
     font-size: 14px;
@@ -226,7 +252,7 @@
 .formulario .container .user .formBx form .signup a{
     font-weight: 600;
     text-decoration: none;
-    color: #677eff;
+    color: #7978F8;
 }
 
 section .container .singupBx{
@@ -304,10 +330,11 @@ section .container .singupBx{
     font-size: 20px;
 }
 
-@media (max-width:991px){
-     /*header*/
 
-     .fundo{
+@media (max-width:991px){
+    /*header*/
+
+    .fundo{
         position: relative;
         top: -40px;
         width: 100%;
@@ -434,4 +461,71 @@ section .container .singupBx{
 /*Oferecimento*/
 
 
+}
+
+@media (min-width:600px) and (max-width: 991px){
+ 
+    
+    /*header*/
+
+    .fundo{
+       position: relative;
+       top: -60px;
+       width: 100%;
+   }
+   
+   .fundo img{
+       position: absolute;
+       width: 100%;
+       top: 0;
+       z-index: -1;
+   }
+
+   .head h3{
+       margin: 10px;
+       margin-top: 10px;
+       padding: 10px;
+       display: flex;
+       font-size: 15px;
+       text-align: center;
+   }
+
+   .image1 img{
+       max-width: 400PX;
+       margin-left: 70px;
+       margin-top: 0px;
+   }
+}
+
+@media (min-width:200px) and  (max-width: 600px){
+
+    /*header*/
+
+    .fundo{
+       position: relative;
+       top: -35px;
+       width: 100%;
+   }
+   
+   .fundo img{
+       position: absolute;
+       width: 100%;
+       top: 0;
+       z-index: -1;
+   }
+
+   .head h3{
+       margin: 10px;
+       margin-top: 10px;
+       padding: 10px;
+       display: flex;
+       font-size: 15px;
+       text-align: center;
+   }
+
+   .image1 img{
+       max-width: 70%;
+       margin-left: 50px;
+       margin-top: 0px;
+   }
 }

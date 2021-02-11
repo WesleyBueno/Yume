@@ -18,14 +18,18 @@
 
     width: 400px;
     height: 400px;
-    margin-top: 100px;
+    margin: 100px;
+}
+
+.head{
+    max-width: 1220px;
 }
 
 .head h3{
-    margin-top: 70px;
+    margin: 70px;
     padding: 10px;
     display: flex;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     color: white;
 }
@@ -49,118 +53,106 @@
 
 /*Calendario*/
 
-.datas{ 
-    margin: 0;
-    padding: 0;
+.cal {
+    width: 100%;
+    height: 100%;
+    background-color: #12121f;
+    color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins',sans-serif;
-}
-
-.calendar{
-    position: relative;
-    background-color: #fff;
+  }
+  
+  .calendar {
+    width: 50%;
+    height: 900px;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  }
+  
+  .month {
     width: 100%;
-    height: 100%;
-    margin-bottom: 50px;
+    height: 12rem;
+    background-color: #167e56;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 15px solid #fff;
-    border-radius: 18px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.calendar .date{
-    width: 500px;
-    padding-left: 90px;
-    box-sizing: border-box;
-}
-
-.calendar .date h3{
-    margin: 0 0 20px;
-    padding: 0;
-    font-size: 24px;
-    font-weight: 500;
+    padding: 0 2rem;
     text-align: center;
-}
-
-.calendar .date .days{
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .month p {
+    font-size: 1.6rem;
+  }
+  
+  .weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.calendar .date .days .day,
-.calendar .date .days .number{
-    width: 48px;
-    height: 48px;
+    align-items: center;
+  }
+  
+  .weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem / 7);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2px;
-    cursor: pointer;
-}
-
-.calendar .date .days .day:first-child,
-.calendar .date .days .number:nth-child(7n+1)
-{
-    color: #7978F8;
-    font-weight: 600;
-}
-
-.calendar .date .days .number.active{
-    background: #7878f8;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-.calendar .date .days .number.active:hover{
-    background-color: rgb(207, 204, 204);
-    color: rgb(80, 79, 79);
-    font-weight: 600;
-}
-
-.calendar .evento{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 60px;
-    width: 400px;
-    height: 100%;
-}
-
-.calendar .evento .ev1{
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .days {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    padding-left: 30px;
-    background-color: #7978F8 ;
-    color: white;
+    padding: 0.2rem;
+  }
+  
+  .days div {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+  }
+  
+  .days div:hover:not(.today) {
+    background-color: #262626;
+    border: 0.2rem solid #777;
     cursor: pointer;
-    transition: 0.5s;
-    margin-top: 10px;
-    border-radius: 18px;
-}
+  }
+  
+  .prev-date,
+  .next-date {
+    opacity: 0.5;
+  }
+  
+  .today {
+    background-color: #167e56;
+  }
 
-.calendar .evento .ev1:hover{
-    background-color: #e2e2e5 ;
-    color: rgb(95, 93, 93);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
 
-.calendar .evento .ev1 h2{
-    padding-top: 9px;
-    font-size: 25px;
-}
-
-.calendar .evento .ev1 h3{
-    padding-top: 9px;
-    padding-left: 10px;
-    font-size: 20px;
-}
 
 /*Calendario*/
 
@@ -210,11 +202,10 @@
 }
 
 .jumbotron2 .btns a:hover{
-    background-color: #ffd83ae7;
-    color:  #f7f7f7;
-    border: 2px solid #7978F8;
-    
-    
+    background-color: #01f964c4;
+    border-color: #7878f8;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34)); 
 }
 
 .jumbotron2 .container h2{
@@ -298,16 +289,11 @@ datas{
 
 .calendar{
     position: relative;
-    background-color: #fff;
     width: 100%;
     height: 100%;
     margin:10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 15px solid #fff;
-    border-radius: 18px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    
 }
 
 .calendar .date{
@@ -423,7 +409,73 @@ datas{
 
 }
 
-@media  (max-width: 700px){
+@media (min-width:600px) and (max-width: 991px){
+ 
+    
+     /*header*/
+
+     .fundo{
+        position: relative;
+        top: -60px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .head h3{
+        margin: 20px;
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .image1 img{
+        max-width: 300px;
+        margin-left: 70px;
+        margin-top: 0px;
+    }
+}
+
+
+
+@media (min-width:200px) and  (max-width: 600px){
+
+     /*header*/
+
+     .fundo{
+        position: relative;
+        top: -35px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .head h3{
+        margin: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .image1 img{
+        max-width: 70%;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
 
     /*Calendario*/
 
@@ -440,8 +492,8 @@ datas{
 .calendar{
     position: relative;
     background-color: #fff;
-    width: 310px;
-    height: 300px;
+    width: 55%;
+    height: 100%;
     margin: 20px;
     display: flex;
     justify-content: space-between;

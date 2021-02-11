@@ -19,6 +19,7 @@
     width: 400px;
     height: 400px;
     padding-top: 50px;
+    margin: 50px;
 }
 
 .header{
@@ -26,7 +27,8 @@
 }
 
 .header h3{
-    margin-top: 50px;
+    color: white;
+    margin: 50px;
     padding: 10px;
     display: flex;
     font-size: 20px;
@@ -100,11 +102,10 @@
 }
 
 .jumbotron2 .btns a:hover{
-    background-color: #ffd83ae7;
-    color:  #f7f7f7;
-    border: 2px solid #7978F8;
-    
-    
+    background-color: #01f964c4;
+    border-color: #7878f8;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34)); 
 }
 
 .jumbotron2 .container h2{
@@ -157,6 +158,15 @@
     padding-top: 8px;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
 }
+
+.card-body .btns a:hover{
+    background-color: #7878f8;
+    border-color: #7878f8;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34));
+}
+
+
 
 
 @media (max-width: 991px){
@@ -269,7 +279,71 @@
         filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
     }
 
-    
+}
 
+@media (min-width:600px) and (max-width: 991px){
+ 
     
+    /*header*/
+
+    .fundo{
+       position: relative;
+       top: -60px;
+       width: 100%;
+   }
+   
+   .fundo img{
+       position: absolute;
+       width: 100%;
+       top: 0;
+       z-index: -1;
+   }
+
+   .head h3{
+       margin: 10px;
+       margin-top: 10px;
+       padding: 10px;
+       display: flex;
+       font-size: 15px;
+       text-align: center;
+   }
+
+   .image1 img{
+       max-width: 200px;
+       margin-left: 70px;
+       margin-top: 0px;
+   }
+}
+
+@media (min-width:200px) and  (max-width: 600px){
+
+    /*header*/
+
+    .fundo{
+       position: relative;
+       top: -35px;
+       width: 100%;
+   }
+   
+   .fundo img{
+       position: absolute;
+       width: 100%;
+       top: 0;
+       z-index: -1;
+   }
+
+   .head h3{
+       margin: 10px;
+       margin-top: 10px;
+       padding: 10px;
+       display: flex;
+       font-size: 15px;
+       text-align: center;
+   }
+
+   .image1 img{
+       max-width: 70%;
+       margin-left: 50px;
+       margin-top: 0px;
+   }
 }

@@ -75,10 +75,10 @@
         </div>
 
         <section class="formulario">
-            <div class="container">
+            <div class="container" id="containerForm">
                 <div class="user singinBx">
                     <div class="imgBx">
-                        <img src="img1.jpg">
+                        <img src="assets/undraw_game_day_ucx9.svg">
                     </div>
                     <div class="formBx">
                         <form>
@@ -86,8 +86,7 @@
                             <input type="text" name="" placeholder="Nome de Usuário">
                             <input type="password" name="" placeholder="Senha">
                             <input type="submit" name="" value="Entrar">
-                            <button onclick="toggleForm();">click</button>
-                            <p class="signup">Não possue cadastro?<a routerLink="/"  onclick="toggleForm();">Criar
+                            <p class="signup">Não possue cadastro?<a (click)='toggleForm()'>Criar
                                     cadastro.</a></p>
                         </form>
                     </div>
@@ -103,11 +102,11 @@
                             <input type="password" name="" placeholder="Senha">
                             <input type="password" name="" placeholder="Confirme a Senha">
                             <input type="submit" name="" value="Cadastrar">
-                            <p class="signup" >Já possui um cadastro?<a onclick="toggleForm();">Entrar.</a></p>
+                            <p class="signup" >Já possui um cadastro?<a (click)='toggleForm();'>Entrar.</a></p>
                         </form>
                     </div>
                     <div class="imgBx">
-                        <img src="img2.jpg">
+                        <img src="assets/undraw_team_ih79.svg">
                     </div>
                 </div>
             </div>
@@ -150,5 +149,4 @@
 
 </div>
 
-<script src="/yume/src/script.js"></script>
 
