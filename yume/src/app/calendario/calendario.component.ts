@@ -10,6 +10,8 @@ export class CalendarioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    window.scroll(0,0)
     
     const date = new Date();
   
@@ -41,18 +43,18 @@ export class CalendarioComponent implements OnInit {
       const nextDays = 7 - lastDayIndex - 1;
   
       const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro",
       ];
   
       let dateHeading1 = document.querySelector(".date h1");

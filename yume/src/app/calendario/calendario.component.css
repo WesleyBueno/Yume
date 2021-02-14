@@ -55,70 +55,74 @@
 
 .cal {
     width: 100%;
-    height: 100%;
-    background-color: #12121f;
+    height: 30%;
     color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-  
+
+
 .calendar {
     width: 50%;
-    height: 815px;
-    background-color: #222227;
-    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    height: 100%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.26);
 }
 
 .month {
     width: 100%;
-    height: 12rem;
-    background-color: #167e56;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #7978F8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
     text-align: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.274);
 }
 
 .month i {
-    font-size: 2.5rem;
+    font-size: 40px;
     cursor: pointer;
 }
 
 .month h1 {
-    font-size: 3rem;
+    font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    margin-bottom: 1rem;
+    margin: 10px;
 }
 
 .month p {
-    font-size: 1.6rem;
+    font-size: 20px;
 }
 
 .weekdays {
+    color: rgb(82, 82, 82);
     width: 100%;
-    height: 5rem;
+    height: 100%;
     padding: 0 0.4rem;
     display: flex;
     align-items: center;
+    margin: 5px;
 }
 
 .weekdays div {
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.1rem;
     width: calc(44.2rem / 7);
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .days {
+    color: rgb(82, 82, 82);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -126,20 +130,19 @@
 }
 
 :host ::ng-deep .days div {
-    font-size: 1.4rem;
+    font-size: 20px;
     margin: 0.3rem;
     width: calc(30rem / 7);
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     transition: background-color 0.2s;
 }
 
 :host ::ng-deep .days div:hover:not(.today) {
-    background-color: #262626;
-    border: 0.2rem solid #777;
+    border-radius: 20px;
+    background-color: #cacaca;
     cursor: pointer;
 }
 
@@ -149,12 +152,44 @@
 }
 
 :host ::ng-deep .today {
-    background-color: #167e56;
+    color: white;
+    border-radius: 20px;
+    background-color: #7978F8;
 }
 
 
 
 /*Calendario*/
+
+/*Evento*/
+
+.evento-group{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.evento-group .day{
+    text-align: center;
+    margin: 20px;
+    background-color: #7978F8;
+    border-radius: 20px;
+    width: 20%;
+    height: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.evento-group .day h3{
+    font-weight: 600;
+    color: white;
+    
+}
+
+.evento-group .day p{
+    color: white;
+    
+}
+/*Evento*/
 
 /*Fixado*/
 
@@ -275,90 +310,40 @@
 
 /*titulo*/
 
+
+
 /*Calendario*/
 
-datas{ 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins',sans-serif;
+.cal {
+    display: none;
 }
 
 
-.calendar{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin:10px;
-    display: flex;
-    
+.calendar {
+    display: none;
 }
 
-.calendar .date{
-    width: 100%;
-    padding-left: 10px;
-    box-sizing: border-box;
-}
+/*Calendario*/
 
-.calendar .date h3{
-    margin: 0 0 20px;
-    padding: 0;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-}
+/*Evento*/
 
-.calendar .date .days{
+.evento-group{
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.calendar .date .days .day,
-.calendar .date .days .number{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    cursor: pointer;
+.evento-group .day{
+    text-align: center;
+    margin: 20px;
+    background-color: #7978F8;
+    border-radius: 20px;
+    width: 100%;
+    height: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.calendar .date .days .day:first-child,
-.calendar .date .days .number:nth-child(7n+1)
-{
-    color: #7978F8;
-    font-weight: 600;
-}
-
-.calendar .date .days .number.active{
-    background: #7878f8;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-.calendar .date .days .number.active:hover{
-    background-color: rgb(207, 204, 204);
-    color: rgb(80, 79, 79);
-    font-weight: 600;
-}
-
-.calendar .evento{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 60px;
-    width: 100px;
-    height: 100px;
-}
-
-
-/*Calendario*/
+/*Evento*/
 
 /*Fixado*/
 
