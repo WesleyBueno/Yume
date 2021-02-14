@@ -1,0 +1,349 @@
+
+
+/*Header*/
+
+.fundo{
+    position: relative;
+    top: -100px;
+}
+
+.fundo img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.image1 img{
+
+    width: 400px;
+    height: 400px;
+    padding-top: 50px;
+    margin: 50px;
+}
+
+.header{
+    max-width: 1220px;
+}
+
+.header h3{
+    color: white;
+    margin: 50px;
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+/*Header*/
+
+/*Container*/
+.container{
+
+}
+/*Container*/
+
+/*Eventos*/
+.title{
+    margin-top: 50px;
+}
+
+.title .icon img{
+    padding: 10px;
+    width: 300px;
+}
+
+
+
+
+.jumbotron2{
+    width: 100%;
+}
+
+
+.jumbotron2 .container{
+    background: linear-gradient(91.62deg, #7978F8 7.51%, rgba(255, 44, 44, 0.64) 111.21%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.jumbotron2 .container .row{
+    margin: 20px;
+}
+
+.jumbotron2 .btns{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.jumbotron2 .btns a{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50%;
+    border: 2px solid #FFD93A;
+    background:  #FFD93A;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    padding-top: 8px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.jumbotron2 .btns a:hover{
+    background-color: #01f964c4;
+    border-color: #7878f8;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34)); 
+}
+
+.jumbotron2 .container h2{
+    font-size: 25px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.jumbotron2 .container img{
+    width: 600px;
+    height: 250px;
+    padding-left: 200px;
+}
+
+.jumbotron2 .container h4{
+    text-align: center;
+    font-size: 15px;
+}
+
+/*Eventos*/
+
+.card-group .card{
+    margin: 10px;
+    box-shadow: 0px 11px 33px -1px rgba(0, 0, 0, 0.25);
+}
+
+.card-body .btns{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.card-body .btns a{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50%;
+    border: 2px solid #FFD93A;
+    background:  #FFD93A;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    padding-top: 8px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+.card-body .btns a:hover{
+    background-color: #7878f8;
+    border-color: #7878f8;
+    color: white;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34));
+}
+
+
+
+
+@media (max-width: 991px){
+
+    .fundo{
+        position: relative;
+        top: -40px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .header h3{
+        margin: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+
+    .image1 img{
+        max-width: 200px;
+        margin-left: 90px;
+        padding-top: 0px;
+    }
+
+    .title .icon img{
+        
+        width: 250px;
+    }
+
+    .jumbotron2 .container img{
+        width: 180px;
+        height: 100px;
+        padding-left: 0px;
+    }
+
+    .jumbotron2 .container h4{
+        display: none;
+    }
+
+    .jumbotron2 .container h2{
+        display: none;
+    }
+
+    .jumbotron2 .btns{
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        margin: 0px;
+    }
+
+    .jumbotron2 .btns a{
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 20px;
+        border: 2px solid #FFD93A;
+        background:  #FFD93A;
+        outline: none;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 17px;
+        transition: 0.3s;
+        padding-top: 0px;
+        filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+    }
+
+    .card-group .card{
+        margin: 15px;
+        box-shadow: 0px 11px 33px -1px rgba(0, 0, 0, 0.25);
+        width: 300px;
+        height: 100%;
+    }
+
+    .card-body .card-title{
+        font-size: 15px;
+    }
+
+    .card-body .card-text{
+        font-size: 10px;
+    }
+
+    .card-body .btns a{
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 30px;
+        border: 2px solid #FFD93A;
+        background:  #FFD93A;
+        outline: none;
+        color: rgb(0, 0, 0);
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 17px;
+        transition: 0.3s;
+        padding-top: 2px;
+        filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+    }
+
+}
+
+@media (min-width:600px) and (max-width: 991px){
+ 
+    
+    /*header*/
+
+    .fundo{
+       position: relative;
+       top: -60px;
+       width: 100%;
+   }
+   
+   .fundo img{
+       position: absolute;
+       width: 100%;
+       top: 0;
+       z-index: -1;
+   }
+
+   .head h3{
+       margin: 10px;
+       margin-top: 10px;
+       padding: 10px;
+       display: flex;
+       font-size: 15px;
+       text-align: center;
+   }
+
+   .image1 img{
+       max-width: 200px;
+       margin-left: 70px;
+       margin-top: 0px;
+   }
+}
+
+@media (min-width:200px) and  (max-width: 600px){
+
+    /*header*/
+
+    .fundo{
+       position: relative;
+       top: -35px;
+       width: 100%;
+   }
+   
+   .fundo img{
+       position: absolute;
+       width: 100%;
+       top: 0;
+       z-index: -1;
+   }
+
+   .head h3{
+       margin: 10px;
+       margin-top: 10px;
+       padding: 10px;
+       display: flex;
+       font-size: 15px;
+       text-align: center;
+   }
+
+   .image1 img{
+       max-width: 70%;
+       margin-left: 50px;
+       margin-top: 0px;
+   }
+}

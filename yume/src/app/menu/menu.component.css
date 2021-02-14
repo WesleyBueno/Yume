@@ -1,9 +1,10 @@
 
-@import url('https://fo nts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,900&display=swap');
 
 
 .navbar{
     background-color: #7978F8;
+    margin: 0;
 }
 
 /*Icon-menu*/
@@ -28,9 +29,6 @@
     transition: 0.4s;
 }
 
-#navbarNav .fa:hover{
-    color: rgb(95, 93, 93);
-}
 
 
 
@@ -44,6 +42,3 @@
     transition: 0.4s;
 }
 
-#navbarNav a:hover{
-    color: rgb(77, 75, 75);
-}
