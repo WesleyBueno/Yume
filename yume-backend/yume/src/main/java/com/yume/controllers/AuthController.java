@@ -1,11 +1,14 @@
 package com.yume.controllers;
 
+import javax.validation.Valid;
+
 import com.yume.models.GrupoModel;
 import com.yume.models.UsuarioModel;
 import com.yume.services.AuthService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,13 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin
 public class AuthController {
 
     @Autowired
     private AuthService service;
 
     @PostMapping("/usuario/cadastrar")
-    public ResponseEntity<String> cadastrar(@RequestBody UsuarioModel usuario) {
+    public ResponseEntity<String> cadastrar(@Valid @RequestBody UsuarioModel usuario) {
         return service.cadastrar(usuario);
     }
 
