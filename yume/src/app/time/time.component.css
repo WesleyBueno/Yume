@@ -16,22 +16,21 @@
 
 .image1 img{
 
-    width: 400px;
+    width: 70%;
     height: 400px;
-    margin: 100px;
+    padding-top: 50px;
+    margin-left: 100px;
 }
 
-.header{
-    max-width: 1220px;
-}
+
 
 .header h3{
-    margin: 70px;
+    color: white;
+    margin: 50px;
     padding: 10px;
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    color: white;
 }
 
 
@@ -67,6 +66,39 @@
 }
 
 /*Apoio*/
+
+
+@media (min-width:2031px) and (max-width:2560px){
+    .fundo{
+        position: relative;
+        top: -150px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media (min-width:1700px) and (max-width:2031px){
+    .fundo{
+        position: relative;
+        top: -120px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+
 
 @media (max-width: 991px){
 

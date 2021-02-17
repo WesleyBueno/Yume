@@ -16,13 +16,9 @@
 
 .image1 img{
 
-    width: 400px;
+    width: 70%;
     height: 400px;
-    margin: 100px;
-}
-
-.head{
-    max-width: 1220px;
+    margin-left: 100px;
 }
 
 .head h3{
@@ -39,8 +35,10 @@
 
 /*titulo*/
 
+
+
 .title{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .title .icon img{
@@ -250,7 +248,7 @@
 }
 
 .jumbotron2 .container img{
-    width: 600px;
+    width: 90%;
     height: 250px;
     padding-left: 200px;
 }
@@ -263,6 +261,53 @@
 /*Fixado*/
 
 /*Responsividade*/
+
+
+@media (min-width:2031px) and (max-width:2560px){
+    .fundo{
+        position: relative;
+        top: -150px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media (min-width:1700px) and (max-width:2031px){
+    .fundo{
+        position: relative;
+        top: -120px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media (min-width:991px) and (max-width:1200px){
+
+    .calendar {
+        width: 60%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.26);
+    }
+    
+
+}
+
+
+
 @media (max-width: 991px){
 
     /*header*/
@@ -314,14 +359,10 @@
 
 /*Calendario*/
 
-.cal {
-    display: none;
-}
-
-
 .calendar {
     display: none;
 }
+
 
 /*Calendario*/
 
@@ -394,6 +435,8 @@
 
 }
 
+
+
 @media (min-width:600px) and (max-width: 991px){
  
     
@@ -426,6 +469,8 @@
         margin-left: 70px;
         margin-top: 0px;
     }
+
+    
 }
 
 
@@ -464,90 +509,49 @@
 
     /*Calendario*/
 
-datas{ 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins',sans-serif;
-}
+    .calendar {
+        display: none;
+    }
 
-
-.calendar{
-    position: relative;
-    background-color: #fff;
-    width: 55%;
-    height: 100%;
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 15px solid #fff;
-    border-radius: 18px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.calendar .date{
-    width: 100%;
-    padding-left: 10px;
-    box-sizing: border-box;
-}
-
-.calendar .date h3{
-    margin: 0 0 20px;
-    padding: 0;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.calendar .date .days{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.calendar .date .days .day,
-.calendar .date .days .number{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    cursor: pointer;
-}
-
-.calendar .date .days .day:first-child,
-.calendar .date .days .number:nth-child(7n+1)
-{
-    color: #7978F8;
-    font-weight: 600;
-}
-
-.calendar .date .days .number.active{
-    background: #7878f8;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-.calendar .date .days .number.active:hover{
-    background-color: rgb(207, 204, 204);
-    color: rgb(80, 79, 79);
-    font-weight: 600;
-}
-
-.calendar .evento{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 60px;
-    width: 100px;
-    height: 100px;
-}
+    .jumbotron2 .container img{
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    
+    .jumbotron2 .container h4{
+        display: none;
+    }
+    
+    .jumbotron2 .container h2{
+        display: none;
+    }
+    .jumbotron2 .btns{
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        margin: 0px;
+    }
+    
+    .jumbotron2 .btns a{
+        text-align: center;
+        text-decoration: none;
+        width: 80%;
+        height: 20px;
+        border: 2px solid #FFD93A;
+        background:  #FFD93A;
+        outline: none;
+        color: rgb(0, 0, 0);
+        font-size: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 17px;
+        transition: 0.3s;
+        padding-top: 0px;
+        filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+    }
 
 
 /*Calendario*/

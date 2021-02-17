@@ -16,15 +16,13 @@
 
 .image1 img{
 
-    width: 400px;
+    width: 50%;
     height: 400px;
     padding-top: 50px;
-    margin: 50px;
+    margin-left: 100px;
 }
 
-.header{
-    max-width: 1220px;
-}
+
 
 .header h3{
     color: white;
@@ -115,7 +113,7 @@
 }
 
 .jumbotron2 .container img{
-    width: 600px;
+    width: 90%;
     height: 250px;
     padding-left: 200px;
 }
@@ -166,10 +164,40 @@
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34));
 }
 
+@media (min-width:2031px) and (max-width:2560px){
+    .fundo{
+        position: relative;
+        top: -150px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media (min-width:1700px) and (max-width:2031px){
+    .fundo{
+        position: relative;
+        top: -120px;
+        width: 100%;
+    }
+    
+    .fundo img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}
 
 
 
 @media (max-width: 991px){
+    /*Header*/
 
     .fundo{
         position: relative;
@@ -193,17 +221,26 @@
         text-align: center;
     }
 
-
     .image1 img{
-        max-width: 200px;
-        margin-left: 90px;
-        padding-top: 0px;
+
+        width: 50%;
+        height: 200px;
+        padding-top: 50px;
+        margin-left: 100px;
     }
+    
+    /*header*/
+
+    /*title*/
 
     .title .icon img{
         
         width: 250px;
     }
+
+    /*title*/
+
+    /*evento*/
 
     .jumbotron2 .container img{
         width: 180px;
@@ -246,6 +283,8 @@
         filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
     }
 
+    /*evento*/
+
     .card-group .card{
         margin: 15px;
         box-shadow: 0px 11px 33px -1px rgba(0, 0, 0, 0.25);
@@ -282,7 +321,7 @@
 }
 
 @media (min-width:600px) and (max-width: 991px){
- 
+
     
     /*header*/
 
@@ -346,4 +385,50 @@
        margin-left: 50px;
        margin-top: 0px;
    }
+
+   /*header*/
+
+   /*evento*/
+
+   .jumbotron2 .container img{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.jumbotron2 .container h4{
+    display: none;
+}
+
+.jumbotron2 .container h2{
+    display: none;
+}
+.jumbotron2 .btns{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    margin: 0px;
+}
+
+.jumbotron2 .btns a{
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+    height: 20px;
+    border: 2px solid #FFD93A;
+    background:  #FFD93A;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    padding-top: 0px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
+}
+
+/*evento*/
 }
