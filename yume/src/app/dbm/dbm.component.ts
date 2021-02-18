@@ -10,6 +10,16 @@ export class DbmComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scroll(0,0)
+
+  
   }
+
+  toggleForm() {
+    var container = document.querySelector('#containerForm');
+    container?.classList.toggle('active')
+}
+
+  
 
 }
