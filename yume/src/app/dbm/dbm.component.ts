@@ -3,6 +3,7 @@ import { Grupo } from '../models/Grupo';
 import { Usuario } from '../models/Usuario';
 import { AuthService } from '../service/auth.service';
 import Swal from 'sweetalert2';
+import { ResponseMessage } from '../models/ResponseMessage';
 
 @Component({
   selector: 'app-dbm',
@@ -11,16 +12,14 @@ import Swal from 'sweetalert2';
 })
 export class DbmComponent implements OnInit {
 
-  usuario: Usuario = new Usuario()
-  grupo: Grupo = new Grupo()
-
-
+  usuario!: Usuario
+  grupo!: Grupo
 
   ngOnInit(): void {
     window.scroll(0, 0)
-
-    this.grupo.integrantes = [new Usuario(), new Usuario(), new Usuario()]
+    this.resetForms()
   }
+  
   constructor(private auth: AuthService) {
   }
 
@@ -32,13 +31,13 @@ export class DbmComponent implements OnInit {
 
   inscrever() {
     this.auth.inscreverUsuario(this.usuario).subscribe(
-      resp => {
-        Swal.fire('Tudo certo!', 'Verifique seu email e clique no link enviado para ativar sua conta', 'success')
+      (resp: ResponseMessage) => {
+        Swal.fire('Tudo certo!', resp.message, 'success')
         console.log(resp)
         this.resetForms()
       },
-      error => {
-        Swal.fire('Algo deu errado!', 'Dados inválidos', 'error')
+      (error: ResponseMessage) => {
+        Swal.fire('Algo deu errado!', error.message, 'error')
         console.log(error)
         this.resetForms()
       }
@@ -47,12 +46,13 @@ export class DbmComponent implements OnInit {
 
   criarGrupo() {
     this.auth.criarGrupo(this.grupo).subscribe(
-      resp => {
-        Swal.fire('Grupo criado!', 'Este código será usado para identificar o grupo.' + resp, 'success')
+      (resp: ResponseMessage) => {
+        Swal.fire('Tudo certo!', resp.message, 'success')
         console.log(resp)
         this.resetForms()
-      }, error => {
-        Swal.fire('Algo deu errado!', 'Dados inválidos', 'error')
+      },
+      (error: ResponseMessage) => {
+        Swal.fire('Algo deu errado!', error.message, 'error')
         console.log(error)
         this.resetForms()
       }
@@ -61,13 +61,13 @@ export class DbmComponent implements OnInit {
 
   convidarGrupo() {
     this.auth.convidarParticipantes(this.grupo).pipe().subscribe(
-      resp => {
-        Swal.fire('Tudo certo!', 'Convites enviados', 'success')
+      (resp: ResponseMessage) => {
+        Swal.fire('Tudo certo!', resp.message, 'success')
         console.log(resp)
         this.resetForms()
       },
-      error => {
-        Swal.fire('Algo deu errado!', 'Houve um erro no envio dos convites. Tente novamente mais tarde', 'error')
+      (error: ResponseMessage) => {
+        Swal.fire('Algo deu errado!', error.message, 'error')
         console.log(error)
         this.resetForms()
       }
