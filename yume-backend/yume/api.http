@@ -1,0 +1,63 @@
+#Cadastrar novo usuário
+POST http://localhost:8080/auth/usuario/cadastrar HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Ricardo",
+    "email": "ricardo.martinsc@hotmail.com",
+    "telefone": "958111009",
+    "cpf": "44458038044",
+    "nascimento": "1996-06-07",
+    "genero": "M",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "instituicaoEnsino": "publica",
+    "escolaridade": "superior"
+}
+
+###
+
+#Ativar conta
+GET http://localhost:8080/auth/usuario/verificar?token=5cf1f86f4d914b6f8a2a8e7c4528f5c3 HTTP/1.1
+Content-Type: application/json
+
+###
+
+#Criar grupo
+POST http://localhost:8080/auth/grupo/criar HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "MathBoys",
+    "integrantes": [
+        {
+            "email": "ricardo.martinsc@hotmail.com"
+        }
+    ]
+}
+
+###
+
+#Convidar participantes
+POST http://localhost:8080/auth/grupo/convidar HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "5de5bf0fb8d04d82beced39781911b5c",
+    "integrantes": [
+        {
+            "email": "ricardo.martinsc@gmail.com"
+        },
+        {
+            "email": "martinsc.ricardo@gmail.com"
+        }
+    ]
+}
+
+###
+
+#Aceitar convite
+GET http://localhost:8080/auth/grupo/convite?token=544a38213a774eb687fb1c8f099005b6&codigo=5de5bf0fb8d04d82beced39781911b5c HTTP/1.1
+Content-Type: application/json
+
+###

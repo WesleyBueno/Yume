@@ -197,12 +197,18 @@
     background: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 40px;
     transition: 0.5s;
+    overflow-y: auto;
 }
 
-.formulario .container .user .formBx form h2{
+.formulario .container .user .form-flex-column {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+}
+
+.formulario .container .user .formBx .form h2{
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -213,7 +219,7 @@
     color: #555;
 }
 
-.formulario .container .user .formBx form input{
+.formulario .container .user .formBx .form input, select, option{
     position: relative;
     width: 100%;
     padding: 10px;
@@ -228,7 +234,7 @@
     font-weight: 300;
 }
 
-.formulario .container .user .formBx form input[type="submit"]{
+.formulario .container .user .formBx .form input[type="submit"]{
     max-width: 100px;
     background: #7978F8;
     color: #fff;
@@ -240,7 +246,7 @@
 }
 
 
-.formulario .container .user .formBx form .signup{
+.formulario .container .user .formBx .form .signup{
     position: relative;
     margin-top: 20px;
     font-size: 12px;
@@ -248,9 +254,10 @@
     color: #555;
     text-transform: uppercase;
     font-weight: 300;
+    height: 50px;
 }
 
-.formulario .container .user .formBx form .signup a{
+.formulario .container .user .formBx .form .signup a{
     font-weight: 600;
     text-decoration: none;
     color: #7978F8;

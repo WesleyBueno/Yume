@@ -82,29 +82,59 @@
                         <img src="assets/undraw_game_day_ucx9.svg">
                     </div>
                     <div class="formBx">
-                        <form>
-                            <h2>Entrar</h2>
-                            <input type="text" name="" placeholder="Nome de Usuário">
-                            <input type="password" name="" placeholder="Senha">
-                            <input type="submit" name="" value="Entrar">
-                            <p class="signup">Não possue cadastro?<a (click)='toggleForm()'>Criar
-                                    cadastro.</a></p>
-                        </form>
+                        <div class="form">
+                            <h2>Se inscreva!</h2>
+                            <input type="text" placeholder="Nome completo" [(ngModel)]="usuario.nome">
+                            <input type="email" placeholder="Email" [(ngModel)]="usuario.email">
+                            <input type="text" placeholder="Telefone (apenas números)" [(ngModel)]="usuario.telefone">
+                            <input type="text" placeholder="CPF (apenas números)" [(ngModel)]="usuario.cpf">
+                            <label for="nascimento">Data de nascimento</label>
+                            <input type="date" id="nascimento" [(ngModel)]="usuario.nascimento">
+                            <label for="nascimento">Gênero</label>
+                            <select [(ngModel)]="usuario.genero">
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <input type="text" placeholder="Cidade" [(ngModel)]="usuario.cidade">
+                            <input type="text" placeholder="Estado" [(ngModel)]="usuario.estado">
+                            <label for="nascimento">Instituição de Ensino</label>
+                            <select [(ngModel)]="usuario.instituicaoEnsino">
+                                <option value="publica">Pública (Municipal|Estadual)</option>
+                                <option value="federal">Federal</option>
+                                <option value="particular">Particular</option>
+                                <option value="militar">Militar</option>
+                            </select>
+                            <label for="nascimento">Escolaridade</label>
+                            <select [(ngModel)]="usuario.escolaridade">
+                                <option value="primeiro">1º Ano do Ensino Médio</option>
+                                <option value="segundo">2º Ano do Ensino Médio</option>
+                                <option value="terceiro">3º Ano do Ensino Médio</option>
+                                <option value="quarto">4º Ano do Ensino Médio (Técnico)</option>
+                            </select>
+                            <input type="submit" value="Enviar" (click)="inscrever()">
+                            <p class="signup">Já está inscrito? <a (click)='toggleForm()'>Crie um grupo!</a></p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="user singupBx">
 
-                    <div class="formBx">
-                        <form>
-                            <h2>Crie um cadastro</h2>
-                            <input type="text" name="" placeholder="Nome de Usuário">
-                            <input type="email" name="" placeholder="Email">
-                            <input type="password" name="" placeholder="Senha">
-                            <input type="password" name="" placeholder="Confirme a Senha">
-                            <input type="submit" name="" value="Cadastrar">
-                            <p class="signup" >Já possui um cadastro?<a (click)='toggleForm();'>Entrar.</a></p>
-                        </form>
+                    <div class="formBx form-flex-column">
+                        <div class="form">
+                            <h2>Crie um grupo!</h2>
+                            <input type="text" placeholder="Nome do grupo" [(ngModel)]="grupo.nome">
+                            <input type="email" placeholder="Email do representante do grupo" [(ngModel)]="grupo.integrantes[0].email">
+                            <input type="submit" value="Enviar" (click)="criarGrupo()">
+                        </div>
+                        <div class="form mt-5">
+                            <h2>Convide participantes!</h2>
+                            <input type="text" placeholder="Código do grupo" [(ngModel)]="grupo.token">
+                            <input type="email" placeholder="Email do parcipante" [(ngModel)]="grupo.integrantes[1].email">
+                            <input type="email" placeholder="Email do parcipante" [(ngModel)]="grupo.integrantes[2].email">
+                            <input type="submit" value="Enviar" (click)="convidarGrupo()">
+                            <p class="signup" >Ainda não se inscreveu? <a (click)='toggleForm()'>Se inscreva!</a></p>
+                        </div>
                     </div>
                     <div class="imgBx">
                         <img src="assets/undraw_team_ih79.svg">
