@@ -3,6 +3,7 @@ package com.yume.controllers;
 import javax.validation.Valid;
 
 import com.yume.models.GrupoModel;
+import com.yume.models.ResponseMessage;
 import com.yume.models.UsuarioModel;
 import com.yume.services.AuthService;
 
@@ -25,27 +26,27 @@ public class AuthController {
     private AuthService service;
 
     @PostMapping("/usuario/cadastrar")
-    public ResponseEntity<String> cadastrar(@Valid @RequestBody UsuarioModel usuario) {
+    public ResponseEntity<ResponseMessage> cadastrar(@RequestBody UsuarioModel usuario) {
         return service.cadastrar(usuario);
     }
 
     @GetMapping("/usuario/verificar")
-    public ResponseEntity<String> ativarUsuario(@RequestParam String token) {
+    public ResponseEntity<ResponseMessage> ativarUsuario(@RequestParam String token) {
         return service.ativarUsuario(token);
     }
 
     @PostMapping("/grupo/criar")
-    public ResponseEntity<String> criarGrupo(@RequestBody GrupoModel grupo) {
+    public ResponseEntity<ResponseMessage> criarGrupo(@RequestBody GrupoModel grupo) {
         return service.criarGrupo(grupo);
     }
 
     @PostMapping("/grupo/convidar")
-    public ResponseEntity<String> convidar(@RequestBody GrupoModel grupo) {
+    public ResponseEntity<ResponseMessage> convidar(@RequestBody GrupoModel grupo) {
         return service.convidar(grupo);
     }
 
     @GetMapping("/grupo/convite")
-    public ResponseEntity<String> aceitarConvite(@RequestParam String token, @RequestParam String codigo) {
+    public ResponseEntity<ResponseMessage> aceitarConvite(@RequestParam String token, @RequestParam String codigo) {
         return service.aceitarConvite(token, codigo);
     }
 }
