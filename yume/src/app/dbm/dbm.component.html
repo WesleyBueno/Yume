@@ -29,23 +29,11 @@
                 <img src="assets/Participe.svg" alt="">
             </div>
         </div>
+        
 
         <div class="text">
             <h2>O Desafio Brasileiro de Matemática elaborado pela Yume é uma olimpíada feita por alunos para alunos, ela tem uma estrutura inovadora de enigmas. Nesta olimpíada, você não precisa ser bom em matemática, mas sim saber trabalhar bem em equipe e estar disposto a solucionar enigmas e desafios. Durante a prova você terá a oportunidade de aprender mais sobre a Matemática, além de se divertir com sua equipe.
             </h2>
-        </div>
-
-    </section>
-
-    <section class="participe">
-
-        <div class="title">
-            <div class="icon">
-                <img src="assets/Participe.svg" alt="">
-            </div>
-        </div>
-
-        <div class="text">
             <h2>Podem participar estudantes do Ensino Médio ou formados no Ensino Médio no máximo um ano (que não estejam cursando nenhum curso superior). Os alunos devem se organizar em uma equipe com 3 (três) estudantes que podem ser compostas por alunos de escolas e/ou séries diferentes.
             </h2>
         </div>
@@ -77,6 +65,7 @@
         <div class="title">
             <div class="icon">
                 <img src="assets/Inscrição.svg" alt="">
+                <i class="fa fa-question-circle-o" aria-hidden="true" (click)="instrucao()"></i>
             </div>
         </div>
 
@@ -90,7 +79,8 @@
                         <div class="form">
                             <h2>Se inscreva!</h2>
                             <input type="text" placeholder="Nome completo" [(ngModel)]="usuario.nome">
-                            <input type="email" placeholder="Email" [(ngModel)]="usuario.email">
+                            <input type="email" placeholder="Email" [(ngModel)]="usuario.email" id="email">
+                            <div id="txtemail"></div>
                             <input type="text" placeholder="Telefone (apenas números)" [(ngModel)]="usuario.telefone">
                             <input type="text" placeholder="CPF (apenas números)" [(ngModel)]="usuario.cpf">
                             <label for="nascimento">Data de nascimento</label>

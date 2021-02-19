@@ -35,3 +35,27 @@ ul.social-network li{
 .fa-instagram:hover{
     color: rgb(255, 0, 170);
 }
+
+.dev p{
+    
+    text-align: center;
+    color: white;
+    
+}
+
+.dev a{
+    text-align: center;
+    color: white;
+}
+
+@media (min-width:200px) and  (max-width: 600px){
+    .dev p{
+        font-size: 10px;
+    }
+
+    .dev a{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+

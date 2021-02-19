@@ -54,6 +54,12 @@
     width: 400px;
 }
 
+.title .fa-question-circle-o{
+    cursor: pointer;
+    font-size: 35px;
+    color: #7878f8;
+}
+
 /*titulo*/
 
 /*Participe*/
@@ -232,6 +238,7 @@
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 300;
+    
 }
 
 .formulario .container .user .formBx .form input[type="submit"]{
@@ -277,14 +284,17 @@ section .container .singupBx{
 
 .formulario .container.active .singupBx .formBx{
     left: 0;
+
 }
 
 .formulario .container .singupBx .imgBx{
     left: -100%;
+    
 }
 
 .formulario .container.active .singupBx .imgBx{
     left: 0;
+    
 }
 
 
@@ -445,8 +455,12 @@ section .container .singupBx{
 /*Etapas*/
 
 /*Formulario*/
+
+
+
 .formulario .container{
     max-width: 400px;
+    height: 900px;
 }
 
 .formulario .container .imgBx{
