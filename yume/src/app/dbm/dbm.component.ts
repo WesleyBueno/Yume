@@ -4,6 +4,7 @@ import { Usuario } from '../models/Usuario';
 import { AuthService } from '../service/auth.service';
 import Swal from 'sweetalert2';
 
+
 @Component({
   selector: 'app-dbm',
   templateUrl: './dbm.component.html',
@@ -28,6 +29,14 @@ export class DbmComponent implements OnInit {
     let container = document.querySelector('#containerForm')
     container?.classList.toggle('active')
     document.querySelectorAll('.formBx').forEach(form => form.scrollTop = 0)
+  }
+
+  instrucao(){
+    Swal.fire(
+      'Inscrição',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Id diam maecenas ultricies mi eget mauris pharetra. Egestas integer eget aliquet nibh praesent tristique. Erat velit scelerisque in dictum non consectetur a. Sed libero enim sed faucibus. Nulla porttitor massa id neque aliquam vestibulum morbi. Ullamcorper malesuada proin libero nunc consequat interdum. Volutpat lacus laoreet non curabitur. Molestie nunc non blandit massa. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Amet volutpat consequat mauris nunc congue. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. At auctor urna nunc id cursus metus aliquam eleifend. Pharetra massa massa ultricies mi quis hendrerit.'
+      
+    )
   }
 
   inscrever() {
