@@ -39,6 +39,9 @@ export class DbmComponent implements OnInit {
   }
 
   inscrever() {
+
+    if (!this.validarFormularioUsuario()) return
+
     this.auth.inscreverUsuario(this.usuario).subscribe(
       (resp: ResponseMessage) => {
         Swal.fire('Tudo certo!', resp.message, 'success')
@@ -54,6 +57,9 @@ export class DbmComponent implements OnInit {
   }
 
   criarGrupo() {
+
+    if (!this.validarFormularioGrupo()) return
+
     this.auth.criarGrupo(this.grupo).subscribe(
       (resp: ResponseMessage) => {
         Swal.fire('Tudo certo!', resp.message, 'success')
@@ -69,6 +75,9 @@ export class DbmComponent implements OnInit {
   }
 
   convidarGrupo() {
+
+    if (!this.validarFormularioConvite()) return
+
     this.auth.convidarParticipantes(this.grupo).pipe().subscribe(
       (resp: ResponseMessage) => {
         Swal.fire('Tudo certo!', resp.message, 'success')
@@ -81,6 +90,112 @@ export class DbmComponent implements OnInit {
         this.resetForms()
       }
     )
+  }
+
+  validarFormularioUsuario() {
+    if (!this.verificarCamposVazios(this.usuario)) {
+      Swal.fire('Erro ao enviar formulário', 'Informe todos os campos do formulário', 'error')
+      return false
+    }
+
+    if (!this.verificarEmail(this.usuario.email)) {
+      Swal.fire('Erro ao enviar formulário', 'Email inválido', 'error')
+      return false
+    }
+
+    if (!this.verificarCPF()) {
+      Swal.fire('Erro ao enviar formulário', 'CPF inválido', 'error')
+      return false
+    }
+
+    return true
+  }
+
+  validarFormularioGrupo() {
+    if (!this.grupo.nome || !this.grupo.integrantes[0].email) {
+      Swal.fire('Erro ao enviar formulário', 'Informe o nome do grupo e o email do representante', 'error')
+      return false
+    }
+
+    if (!this.verificarEmail(this.grupo.integrantes[0].email)) {
+      Swal.fire('Erro ao enviar formulário', 'Email inválido', 'error')
+      return false
+    }
+
+    return true
+  }
+  
+  validarFormularioConvite() {
+    if (!this.grupo.token || (!this.grupo.integrantes[1].email && !this.grupo.integrantes[2].email)) {
+      Swal.fire('Erro ao enviar formulário', 'Informe o código do grupo e o(s) email(s) dos convidados', 'error')
+      return false
+    }
+
+    if (this.grupo.integrantes[1].email && !this.verificarEmail(this.grupo.integrantes[1].email)) {
+      Swal.fire('Erro ao enviar formulário', 'Primeiro email inválido', 'error')
+      return false
+    }
+
+    if (this.grupo.integrantes[2].email && !this.verificarEmail(this.grupo.integrantes[2].email)) {
+      Swal.fire('Erro ao enviar formulário', 'Segundo email inválido', 'error')
+      return false
+    }
+
+    return true
+  }
+
+  verificarCamposVazios(formulario: Object) {
+    let campos = Object.entries(formulario)
+    for (let i = 0; i < campos.length; i++) {
+      if (!campos[i][1]) return false
+    }
+    return true
+  }
+
+  verificarEmail(email: string) {
+    return email.match(/^[a-zA-Z0-9._+~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g)
+  }
+
+  verificarCPF() {
+    if (this.usuario.cpf.length != 11) return false
+    
+    for (let i = 0; i < this.usuario.cpf.length; i++) {
+        if (isNaN(Number(this.usuario.cpf[i]))) return false
+    }
+
+    let digitosRepetidos = false;
+    for (let i = 0; i < (this.usuario.cpf.length - 1); i++) {
+        if (this.usuario.cpf[i] == this.usuario.cpf[i + 1])
+            digitosRepetidos = true
+        else {
+            digitosRepetidos = false
+            break
+        }
+    }
+    
+    if (digitosRepetidos) return false
+
+    let digitoVerificador, somaDigito = 0, multiplicador = 10, resto    
+    for (let i = 0; i < (this.usuario.cpf.length - 2); i++, multiplicador--) {
+        somaDigito += parseInt(this.usuario.cpf[i]) * multiplicador
+    }
+    
+    resto = somaDigito % 11
+    digitoVerificador = (resto < 2) ? 0 : (11 - resto)
+    
+    if (digitoVerificador != parseInt(this.usuario.cpf[9])) return false
+
+    somaDigito = 0, multiplicador = 11
+    for (let i = 0; i < (this.usuario.cpf.length - 1); i++, multiplicador--) {
+        somaDigito += parseInt(this.usuario.cpf[i]) * multiplicador
+    }
+    
+    resto = somaDigito % 11
+    digitoVerificador = (resto < 2 ? 0 : 11 - resto)
+
+    if (digitoVerificador != parseInt(this.usuario.cpf[10])) return false
+
+    return true
   }
 
   resetForms() {
