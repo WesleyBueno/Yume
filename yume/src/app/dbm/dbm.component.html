@@ -85,14 +85,20 @@
                             <input type="text" placeholder="CPF (apenas números)" [(ngModel)]="usuario.cpf">
                             <label for="nascimento">Data de nascimento</label>
                             <input type="date" id="nascimento" [(ngModel)]="usuario.nascimento">
-                            <label for="nascimento">Gênero</label>
-                            <select [(ngModel)]="usuario.genero">
+                            <label for="genero">Gênero</label>
+                            <select [(ngModel)]="usuario.genero" id="genero">
                                 <option value="feminino">Feminino</option>
                                 <option value="masculino">Masculino</option>
                                 <option value="outro">Outro</option>
                             </select>
-                            <input type="text" placeholder="Cidade" [(ngModel)]="usuario.cidade">
-                            <input type="text" placeholder="Estado" [(ngModel)]="usuario.estado">
+                            <label for="estado">Estado</label>
+                            <select [(ngModel)]="usuario.estado" (change)="buscarMunicipiosPorEstado()" id="estado">
+                                <option *ngFor="let estado of estados" value="{{estado.nome}}">{{estado.nome}}</option>
+                            </select>
+                            <label for="cidade">Cidade</label>
+                            <select [(ngModel)]="usuario.cidade" id="cidade">
+                                <option *ngFor="let municipio of municipios" value="{{municipio.nome}}">{{municipio.nome}}</option>
+                            </select>
                             <label for="nascimento">Instituição de Ensino</label>
                             <select [(ngModel)]="usuario.instituicaoEnsino">
                                 <option value="publica">Pública (Municipal|Estadual)</option>

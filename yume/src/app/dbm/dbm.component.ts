@@ -4,6 +4,8 @@ import { Usuario } from '../models/Usuario';
 import { AuthService } from '../service/auth.service';
 import Swal from 'sweetalert2';
 import { ResponseMessage } from '../models/ResponseMessage';
+import { IbgeService } from '../service/ibge.service';
+import { ResponseIBGE } from '../models/ResponseIBGE';
 
 
 @Component({
@@ -15,13 +17,16 @@ export class DbmComponent implements OnInit {
 
   usuario!: Usuario
   grupo!: Grupo
+  estados!: ResponseIBGE[]
+  municipios!: ResponseIBGE[]
 
   ngOnInit(): void {
     window.scroll(0, 0)
     this.resetForms()
+    this.buscarEstados()
   }
   
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService, private ibge: IbgeService) {
   }
 
   toggleForm() {
@@ -36,6 +41,28 @@ export class DbmComponent implements OnInit {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Id diam maecenas ultricies mi eget mauris pharetra. Egestas integer eget aliquet nibh praesent tristique. Erat velit scelerisque in dictum non consectetur a. Sed libero enim sed faucibus. Nulla porttitor massa id neque aliquam vestibulum morbi. Ullamcorper malesuada proin libero nunc consequat interdum. Volutpat lacus laoreet non curabitur. Molestie nunc non blandit massa. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Amet volutpat consequat mauris nunc congue. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. At auctor urna nunc id cursus metus aliquam eleifend. Pharetra massa massa ultricies mi quis hendrerit.'
       
     )
+  }
+
+  buscarEstados() {
+    this.ibge.buscarEstados().subscribe((estados: ResponseIBGE[]) => {
+      this.estados = estados
+    })
+  }
+
+  buscarMunicipiosPorEstado() {
+    let id = this.pegarIdEstado(this.usuario.estado)
+    if (id < 0) return
+
+    this.ibge.buscarMunicipiosPorEstado(id).subscribe((municipios: ResponseIBGE[]) => {
+      this.municipios = municipios
+    })
+  }
+
+  pegarIdEstado(estado: string): number {
+    for (let i = 0; i < this.estados.length; i++) {
+      if (this.estados[i].nome == estado) return this.estados[i].id
+    }
+    return -1
   }
 
   inscrever() {
