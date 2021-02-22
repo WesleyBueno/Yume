@@ -574,12 +574,7 @@ section .container .singupBx{
     margin-top: 150px;
 }
 
-.etapas .text h2{
-    display: flex;
-    margin: 20px;
-    text-align: center;
-    font-size: 20px;
-}
+
 
 .etapas .btns{
     display: flex;
@@ -628,11 +623,6 @@ section .container .singupBx{
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.14));
 }
 
-.etapas .btns #regulamento:hover{
-    background-color: #e71845b2;
-    border-color: #e71845d7;
-    color: white;
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.34));
-}
+
 
 }
