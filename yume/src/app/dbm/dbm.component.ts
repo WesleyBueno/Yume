@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { ResponseMessage } from '../models/ResponseMessage';
 import { IbgeService } from '../service/ibge.service';
 import { ResponseIBGE } from '../models/ResponseIBGE';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -72,12 +73,10 @@ export class DbmComponent implements OnInit {
     this.auth.inscreverUsuario(this.usuario).subscribe(
       (resp: ResponseMessage) => {
         Swal.fire('Tudo certo!', resp.message, 'success')
-        console.log(resp)
         this.resetForms()
       },
-      (error: ResponseMessage) => {
-        Swal.fire('Algo deu errado!', error.message, 'error')
-        console.log(error)
+      (error: HttpErrorResponse) => {
+        Swal.fire('Algo deu errado!', error.error.message, 'error')
         this.resetForms()
       }
     )
@@ -90,12 +89,10 @@ export class DbmComponent implements OnInit {
     this.auth.criarGrupo(this.grupo).subscribe(
       (resp: ResponseMessage) => {
         Swal.fire('Tudo certo!', resp.message, 'success')
-        console.log(resp)
         this.resetForms()
       },
-      (error: ResponseMessage) => {
-        Swal.fire('Algo deu errado!', error.message, 'error')
-        console.log(error)
+      (error: HttpErrorResponse) => {
+        Swal.fire('Algo deu errado!', error.error.message, 'error')
         this.resetForms()
       }
     )
@@ -104,16 +101,18 @@ export class DbmComponent implements OnInit {
   convidarGrupo() {
 
     if (!this.validarFormularioConvite()) return
+    
+    let grupo = new Grupo()
+    Object.assign(grupo, this.grupo)
+    grupo.integrantes = grupo.integrantes.filter(integrante => integrante.email)
 
-    this.auth.convidarParticipantes(this.grupo).pipe().subscribe(
+    this.auth.convidarParticipantes(grupo).pipe().subscribe(
       (resp: ResponseMessage) => {
         Swal.fire('Tudo certo!', resp.message, 'success')
-        console.log(resp)
         this.resetForms()
       },
-      (error: ResponseMessage) => {
-        Swal.fire('Algo deu errado!', error.message, 'error')
-        console.log(error)
+      (error: HttpErrorResponse) => {
+        Swal.fire('Algo deu errado!', error.error.message, 'error')
         this.resetForms()
       }
     )
@@ -158,12 +157,14 @@ export class DbmComponent implements OnInit {
       return false
     }
 
-    if (this.grupo.integrantes[1].email && !this.verificarEmail(this.grupo.integrantes[1].email)) {
+    let integrantes = this.grupo.integrantes.filter(integrante => integrante.email)
+
+    if (integrantes[0] && integrantes[0].email && !this.verificarEmail(integrantes[0].email)) {
       Swal.fire('Erro ao enviar formulário', 'Primeiro email inválido', 'error')
       return false
     }
 
-    if (this.grupo.integrantes[2].email && !this.verificarEmail(this.grupo.integrantes[2].email)) {
+    if (integrantes[1] && integrantes[1].email && !this.verificarEmail(integrantes[1].email)) {
       Swal.fire('Erro ao enviar formulário', 'Segundo email inválido', 'error')
       return false
     }

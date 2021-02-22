@@ -1,5 +1,6 @@
 package com.yume.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -114,12 +115,12 @@ public class AuthService {
 
 		grupo.setAtivo(false);
 
-		List<UsuarioModel> integrantes = grupo.getIntegrantes();
-		integrantes.set(0, representante);
+		List<UsuarioModel> integrantes = new ArrayList<UsuarioModel>();
+		integrantes.add(representante);
 		grupo.setIntegrantes(integrantes);
-
-		grupoRepository.save(grupo);
-
+		
+		grupo = grupoRepository.save(grupo);
+		
 		representante.setGrupo(grupo);
 		usuarioRepository.save(representante);
 
@@ -136,7 +137,7 @@ public class AuthService {
 		if (grupoExistente == null)
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseMessage("INVALID_GROUP", "Grupo não existe"));
 
-		if (grupo.isAtivo())
+		if (grupoExistente.isAtivo())
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseMessage("INVALID_GROUP", "Grupo completo"));
 
 		if (grupoExistente.getIntegrantes().size() + grupo.getIntegrantes().size() > MAXIMO_INTEGRANTES)

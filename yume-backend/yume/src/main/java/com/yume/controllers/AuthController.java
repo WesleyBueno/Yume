@@ -1,7 +1,5 @@
 package com.yume.controllers;
 
-import javax.validation.Valid;
-
 import com.yume.models.GrupoModel;
 import com.yume.models.ResponseMessage;
 import com.yume.models.UsuarioModel;
