@@ -85,11 +85,13 @@
                             <input type="text" placeholder="CPF (apenas números)" [(ngModel)]="usuario.cpf">
                             <label for="nascimento">Data de nascimento</label>
                             <input type="date" id="nascimento" [(ngModel)]="usuario.nascimento">
-                            <label for="genero">Gênero</label>
+                            <label for="genero">Selecione a opção que você mais se identifica</label>
                             <select [(ngModel)]="usuario.genero" id="genero">
-                                <option value="feminino">Feminino</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="outro">Outro</option>
+                                <option value="mulher">Mulher (cis ou trans)</option>
+                                <option value="homem">Homem (cis ou trans)</option>
+                                <option value="nbinario">Não-bínario</option>
+                                <option value="travesti">Travesti</option>
+                                <option value="ndeclarar">Prefiro não declarar</option>
                             </select>
                             <label for="estado">Estado</label>
                             <select [(ngModel)]="usuario.estado" (change)="buscarMunicipiosPorEstado()" id="estado">
