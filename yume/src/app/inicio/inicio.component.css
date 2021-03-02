@@ -37,15 +37,9 @@
 
 /*Header*/
 
-/*Container*/
-.container{
-
-}
-/*Container*/
-
 /*Eventos*/
 .title{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .title .icon img{
@@ -373,12 +367,14 @@
        z-index: -1;
    }
 
-   .head h3{
-       margin: 10px;
-       margin-top: 10px;
+
+
+   .header h3{
+       margin: 5px;
+       margin-top: 5px;
        padding: 10px;
        display: flex;
-       font-size: 15px;
+       font-size: 12px;
        text-align: center;
    }
 

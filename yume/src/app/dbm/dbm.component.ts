@@ -36,11 +36,27 @@ export class DbmComponent implements OnInit {
     document.querySelectorAll('.formBx').forEach(form => form.scrollTop = 0)
   }
 
+
+
   instrucao(){
     Swal.fire(
       'Inscrição',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Id diam maecenas ultricies mi eget mauris pharetra. Egestas integer eget aliquet nibh praesent tristique. Erat velit scelerisque in dictum non consectetur a. Sed libero enim sed faucibus. Nulla porttitor massa id neque aliquam vestibulum morbi. Ullamcorper malesuada proin libero nunc consequat interdum. Volutpat lacus laoreet non curabitur. Molestie nunc non blandit massa. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Amet volutpat consequat mauris nunc congue. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. At auctor urna nunc id cursus metus aliquam eleifend. Pharetra massa massa ultricies mi quis hendrerit.'
-      
+      '1. Faça sua inscrição individual preenchendo todos os campos abaixo com informações válidas.' 
+      + '<br>' + 
+      '2. Verifique o email de autenticação enviado para o endereço de email informado.' 
+      + '<br>' + 
+      '3. Faça a autenticação do seu usuário clicando no link informado no corpo do email.' 
+      + '<br>' +  
+      '4. Se você for o <b>representante</b> do grupo vá para a sessão de "Criar grupo", de um nome para o seu grupo e informe seu email autenticado para criar o grupo.' 
+      + '<br>' + 
+      '5. Se você for o <b>representante</b> do grupo verifique seu email. Será enviado o código do grupo por lá.' 
+      + '<br>' + 
+      '6. Se você for o <b>representante</b> do grupo preencha os campos da sessão de "Convide participantes" com o código do grupo informado por email do <b>representante</b> e com os emails autenticados dos membros do grupo.' 
+      + '<br>' +  
+      "7. Caso você <b>não seja o representante do grupo</b>, aguarde o representante criar o grupo e enviar o convite para o email informado na inscrição individual." 
+      + '<br>' + 
+      '8. Após receber o email, clique em aceitar o convite e você será colocado dentro do grupo e já estará pronto para a olimpíada!'
+
     )
   }
 

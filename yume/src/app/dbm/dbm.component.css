@@ -335,14 +335,15 @@ section .container .singupBx{
 .oferecimento .jumbotron2 img{
     margin: 20px;
     border-radius: 100%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .oferecimento .jumbotron2 h2{
+    text-align: center;
     margin-bottom: 20px;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 
