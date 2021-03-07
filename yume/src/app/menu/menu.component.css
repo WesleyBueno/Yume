@@ -42,5 +42,23 @@
     transition: 0.4s;
 }
 
+@media (max-width:991px){
+    #navbarNav a{
+        
+        font-size: 17px;
+        
+    }
+    #navbarNav .fa-home{
+        font-size: 20px;
+    }
+    #navbarNav .fa-calendar{
+        font-size: 16px
+    }
+
+    #navbarNav .fa-users{
+        font-size: 16px;
+    }
+}
+
 
 
