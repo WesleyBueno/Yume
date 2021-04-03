@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "yume"
+  "defaultProject": "yume",
+  "cli": {
+    "analytics": "1947a3fe-a3ed-4998-8e73-3d44e18fa0d7"
+  }
 }
