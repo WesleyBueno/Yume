@@ -13,14 +13,14 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   inscreverUsuario(usuario: Usuario): Observable<ResponseMessage> {
-    return this.http.post<ResponseMessage>("http://yumeeducacao.com.br/usuario", usuario)
+    return this.http.post<ResponseMessage>("https://yumeeducacao.herokuapp.com/auth/usuario/cadastrar", usuario)
   }
 
   criarGrupo(grupo: Grupo): Observable<ResponseMessage> {
-    return this.http.post<ResponseMessage>("http://yumeeducacao.com.br/grupo", grupo)
+    return this.http.post<ResponseMessage>("https://yumeeducacao.herokuapp.com/auth/grupo/criar", grupo)
   }
   
   convidarParticipantes(grupo: Grupo): Observable<ResponseMessage> {
-    return this.http.post<ResponseMessage>("http://yumeeducacao.com.br/convite", grupo)
+    return this.http.post<ResponseMessage>("https://yumeeducacao.herokuapp.com/auth/grupo/convidar", grupo)
   }
 }
